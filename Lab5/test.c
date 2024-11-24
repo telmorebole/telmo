@@ -89,7 +89,7 @@ int main(int argc, char *argv[]) {
 	if (argc>1){
 	  if ((argv[1])[0]=='A'){
 	    pcoef=coefsPA;
-	    desplaza=17;//Cambiar (antes era 0)
+	    desplaza=18;//Cambiar (antes era 0)
 	  }else{
 	    pcoef=coefsPB;
 	    desplaza=17;//Cambiar
