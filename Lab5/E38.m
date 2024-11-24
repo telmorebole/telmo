@@ -15,6 +15,12 @@ fprintf('%d\n', filtro_pb_escalado);
 fprintf('Coeficientes del filtro paso alto:\n');
 fprintf('%d\n', filtro_pa_escalado);
 
+% Calcular el factor de corrección de los filtros
+desplaza_pb = ceil(log2(sum(abs(filtro_pb_escalado))));
+fprintf(1, 'Desplazamiento registro pasobajo = %d\n', desplaza_pb);
+desplaza_pa = ceil(log2(sum(abs(filtro_pa_escalado))));
+fprintf(1, 'Desplazamiento registro pasoalto = %d\n\n', desplaza_pa);
+
 % FFT para respuesta en frecuencia
 N= 1024; % Número de puntos para la FFT
 H_pb_fft = fft(filtro_pb_escalado, N);
